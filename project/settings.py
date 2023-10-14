@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC + 1' # De angola: UTC + 1, BR: America/Sao_paulo, USA: UTC
+TIME_ZONE = 'UTC' # De angola: UTC/GMT +1 , BR: America/Sao_paulo, USA: UTC
 
 USE_I18N = True
 
