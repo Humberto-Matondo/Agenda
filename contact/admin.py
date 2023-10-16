@@ -25,4 +25,6 @@ class ContactAdmin(admin.ModelAdmin):
     #list_editable = 'first_name', 'last_name', #N acho util.
 
     #Gerar link, para entrares no perfil automaticamente
-    list_display_links = 'first_name', 'id',
+    list_display_links = 'first_name', 'last_name', 'email', 'phone',
+
+     

@@ -8,8 +8,9 @@ from django.utils import timezone
 # first_name(string), last_name(string), phone(string)
 # email(string), created_date(date), description(test)
 
-# category(foreign key), show(boolean), owner(foreign key)
-# picture (imagem)
+# category(foreign key), show(boolean), picture (imagem)
+
+# owner(foreign key)
 class Contact(models.Model):
 
     first_name = models.CharField(max_length=50)
@@ -19,6 +20,11 @@ class Contact(models.Model):
     created_date = models.DateField(default=timezone.now)
     description = models.TextField(blank=True)
 
+    show = models.BooleanField(default=True)
+    picture = models.ImageField(blank=True, upload_to= 'picture/%Y/%m/') #dentro da pastas media, vai criar pasta picture, 
+                                # dentro dela vai criar pasta do ano*(%Y) atuas, dentro dela vai criar pasta do mes(%m) atuas
+    
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+    
     

@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from django.conf.urls.static import static 
+from django.conf import settings # Esse e o unico jeito de importar os SETTINGS do django.
+
 urlpatterns = [
     path('', include('contact.urls')),
     path('admin/', admin.site.urls),
 ]
+
+#Fazendo isso, o django vai conhecer o caminho da MEDIA e do STATIC, e apareceram as imagens no admin.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
