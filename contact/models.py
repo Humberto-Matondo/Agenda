@@ -12,6 +12,10 @@ from django.utils import timezone
 
 # owner(foreign key)
 class Category(models.Model):
+    class meta: 
+        verbuso_name = 'Category'#Singular dessa classe sera esse. 
+        verbuso_name_plural = 'categories'# plural dessa classe sera essa. 
+
     name = models.CharField(max_length=50)
     
     def __str__(self) -> str:
