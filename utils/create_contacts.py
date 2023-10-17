@@ -14,7 +14,7 @@ sys.path.append(str(DJANGO_BASE_DIR))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
 settings.USE_TZ = False #para ignorar o erro de timezone, para n conf o timezone
 
-django.setup() # Para conf o Django.
+django.setup() # Para conf o Django.    
 
 if __name__ == '__main__': #Aqui e o inicio do meu SCRIPT
     import faker # Essa e uma biblioteca usada para gerar dados Falsos, usados para testes do app
