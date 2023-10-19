@@ -36,14 +36,10 @@ def contact(request, contact_id):
 
 def search(request):
 
-    search_value = request.GET.get('h','').strip() # Para se pegar o valor do dicionario de request...
-                                        # get('h','') - caso o valor do 'h' for encontrado retorna o Valor, 
-                                        # Caso n Encontrar vai retornar uma string VAZIA. 
-                                        # O .strip() serve para remover os espacos do comeco e do final, escrito pelo usuario
-
-    #Caso o usuario digitar apenas espacoes, sem nenhum valor:
+    search_value = request.GET.get('h','').strip() 
+                           
     if search_value == '':
-        return redirect('contact:index') # Vai redirecionar-lo para a pagina inicial, como se nada tivesse acontecido. 
+        return redirect('contact:index')  
 
     contacts = Contact.objects.\
         filter(show=True).\
@@ -54,11 +50,6 @@ def search(request):
             Q(email__icontains= search_value)
             ).\
         order_by('-id') 
-        # para usar os filters look up, primeiro tens que add o campo que procuras 
-        # e depois dois Underlines(__) e o filter.
-        # o Q()- e uma funcao que me permite usar o "|" = OR, pq a virgula(,) funciona como AND
-        # Q1() | Q1() = se o nome estiver no Q1 ou Q2 mostra ele... ou o numero de tel, ou o email
-        #para que de para buscarmos pelo nome completo, teriamos que ter um valor FULLNAME e comparariamos ele com o search_value
 
     context = {
         'contacts': contacts, 
