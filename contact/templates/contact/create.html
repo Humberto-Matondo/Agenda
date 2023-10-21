@@ -14,10 +14,17 @@
             {{ field }}
 
             {{ field.errors }}
+            
+            {% if field.help_text %}
+                <p class="help-text">
+                    {{ field.help_text }}
+                </p>
+            {% endif %}
+
           </div>
         {% endfor %}
       </div>
-      
+
       {% comment "" %}O CAMPO ABAIXO E PARA MOSTRAR OS ERROS: {% endcomment %}
       {% if form.non_field_errors %}
         <div class="form-content">
