@@ -5,22 +5,27 @@
     <h2>CONTACT</h2>
 
     <form action="{% url 'contact:create' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="form-content">
+        {% for field in form %}
+          <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+
+            {{ field.errors }}
+          </div>
+        {% endfor %}
+      </div>
       
-        {% csrf_token %}
-
-      <div class="form-content">
-        <div class="form-group">
-          <label for="id_first_name">PRIMEIRO NOME</label>
-          <input type="text" name="first_name" maxlength="255" id="id_first_name" />
+      {% comment "" %}O CAMPO ABAIXO E PARA MOSTRAR OS ERROS: {% endcomment %}
+      {% if form.non_field_errors %}
+        <div class="form-content">
+          <div class="form-group">
+            <div class="message error">{{ form.non_field_errors }}</div>
+          </div>
         </div>
-      </div>
-
-      <div class="form-content">
-        <div class="form-group">
-          <label for="id_last_name">SOBRENOME</label>
-          <input type="text" name="last_name" maxlength="255" id="id_last_name" />
-        </div>
-      </div>
+      {% endif %}
 
       <div class="form-content">
         <div class="form-group">
