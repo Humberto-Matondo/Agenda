@@ -3,22 +3,19 @@ from django.core.exceptions import ValidationError
 from . import models
 
 class ContactForm(forms.ModelForm): 
-    #codigo do widget: 
-    first_name = forms.CharField(
-        widget = forms.TextInput(
+    picture = forms.ImageField(
+        widget= forms.FileInput(
             attrs={
-                'placeholder':'digite seu primeiro nome',
+                'accept':'image/*', # Essa linha diz para ceitar qualquer imagem, posso restringir se quiser.
             }
-        ),
-        label= 'Primeiro nome',
-        help_text = 'testo de ajuda para o usuario',
+        )
     )
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
     class Meta:
         model = models.Contact
-        fields = ('first_name','last_name','phone','email','description','category')
+        fields = (
+            'first_name','last_name','phone','email','description',
+            'category','picture'
+            )
  
     def clean(self):
 

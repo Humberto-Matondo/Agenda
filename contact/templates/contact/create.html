@@ -8,6 +8,7 @@
       {% csrf_token %}
 
       <div class="form-content">
+
         {% for field in form %}
           <div class="form-group">
             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
@@ -20,12 +21,19 @@
                     {{ field.help_text }}
                 </p>
             {% endif %}
-
+            
           </div>
+          
+          {% if field.name == 'picture' and field.value.url%} 
+          <div class="form-group">
+                <img src="{{ field.value.url }}" alt="">
+          </div>
+          {% endif %}
+        
         {% endfor %}
+
       </div>
 
-      {% comment "" %}O CAMPO ABAIXO E PARA MOSTRAR OS ERROS: {% endcomment %}
       {% if form.non_field_errors %}
         <div class="form-content">
           <div class="form-group">
