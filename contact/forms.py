@@ -2,7 +2,7 @@ from . import models
 from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.forms import UserCreationForm
-
+from django.contrib.auth.models import User
 class ContactForm(forms.ModelForm): 
     picture = forms.ImageField(
         widget= forms.FileInput(
@@ -48,4 +48,33 @@ class ContactForm(forms.ModelForm):
         return first_name
 
 class RegisterForm(UserCreationForm):
-    ...
+    first_name = forms.CharField(
+        required= True,
+        min_length= 3,
+    )
+    
+    last_name = forms.CharField(
+        required= True,
+        min_length= 3,
+    )
+
+    email = forms.EmailField()
+    # esses campos acima(first_name, last_name, e email) servem para forcar o usuarui a informar os dados
+    # sem isso acima os usuarios podem n digitar aquelas informacoes
+    class Meta:
+        model = User
+        fields = (
+            'first_name', 'last_name', 'email', 'username', 'password1',
+            'password2',
+        )
+
+        def clean_email(self):
+            email = self.cleaned_data.get('email')
+            
+            if User.objects.filter(emil = email).exists(): # Se existe algum usuario com esse email vai retornar TRUE
+                self.add_error(
+                    'email',
+                    ValidationError('Ja existe este e-mail', code='invalid')
+                )
+
+            return email
