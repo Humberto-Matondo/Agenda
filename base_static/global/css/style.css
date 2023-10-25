@@ -239,7 +239,7 @@ svg {
     border: 1px solid rgba(255, 255, 0, 90%);
 }
 
-.message.info  {
+.message.info {
     background: rgb(0, 83, 134);
     border: 1px solid rgba(0, 83, 134, 90%);
 }

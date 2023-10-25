@@ -2,6 +2,8 @@ from django.shortcuts import  get_object_or_404, render, redirect
 from contact.forms import ContactForm
 from django.urls import reverse
 from contact.models import Contact
+from django.contrib import messages
+
 
 def create(request):
     form_action = reverse('contact:create')
@@ -16,6 +18,7 @@ def create(request):
 
         if form.is_valid(): 
             contact = form.save() 
+            messages.success(request, 'Contact Created') #Vai informar que o ficheiro foi salvado
             return redirect('contact:update', contact_id = contact.pk) 
         
         return render(
@@ -51,6 +54,7 @@ def update(request, contact_id):
 
         if form.is_valid(): 
             contact = form.save() 
+            messages.success(request, 'Contact Updated') #Vai informar que o ficheiro foi salvado
             return redirect('contact:update', contact_id = contact.pk) 
         
         return render(
@@ -78,6 +82,7 @@ def delete(request, contact_id):
 
     if confirmation == 'yes':
         contact.delete()
+        messages.success(request, 'Contact Deteted') #Vai informar que o ficheiro foi salvado
         return redirect('contact:index')
 
     return render(
