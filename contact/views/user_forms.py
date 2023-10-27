@@ -1,4 +1,5 @@
 from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import redirect, render
 
@@ -46,11 +47,13 @@ def login_view(request):
             'form': form
         }
     )
-
+    
+@login_required(login_url='contact:login') #Para caso n esteja logado, redirecionar isso para contact:login
 def logout_view(request):
     auth.logout(request)
     return redirect('contact:login')
 
+@login_required(login_url='contact:login') #Para caso n esteja logado, redirecionar isso para contact:login
 def user_update(request):
 
     form = RegisterUpdateForm(instance=request.user)
