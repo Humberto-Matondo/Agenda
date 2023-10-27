@@ -1,24 +1,43 @@
 <header class="header">
-    <h1 class="header-heading">
-      <a href="{% url "contact:index"%}" class="header-link">AGENDA</a>
-    </h1>
-    <nav class="menu">
-      <ul class="menu-list">
+  <h1 class="header-heading"><a href="{% url 'contact:index' %}" class="header-link">AGENDA</a></h1>
+  <nav class="menu">
+    <ul class="menu-list">
+
+      {% comment '' %}As coisas a baixo so acontecera caso o usario esteja logado{% endcomment %}
+      
+      {% if user.is_authenticated %}
+        
         <li class="menu-item">
-          <a href="{% url 'contact:create' %}" class="menu-link">
-            CREATE CONTACT
-          </a>
+          <a href="{% url 'contact:user_update' %}" class="menu-link">USER UPDATE</a>
         </li>
+
         <li class="menu-item">
-          <a href="" class="menu-link">
-            Link 2
-          </a>
+          <a href="{% url 'contact:create' %}" class="menu-link">CREATE CONTACT</a>
         </li>
-      </ul>
-    </nav>
-    <div class="search">
-      <form action="{% url "contact:search" %}" method="GET"> 
-        <input type="search" class="search-input" placeholder="Search" id="search" name="h" value="{{ request.GET.h.strip}}"></input>
-      </form>
-    </div>
-  </header>
+
+        <li class="menu-item">
+          <a href="{% url 'contact:logout' %}" class="menu-link">LOGOUT</a>
+        </li>
+
+        {% comment '' %}Coisas que acontecem caso o usuario n esteja logado.{% endcomment %}
+      {% else %}
+        
+        <li class="menu-item">
+          <a href="{% url 'contact:login' %}" class="menu-link">LOGIN</a>
+        </li>  
+
+        <li class="menu-item">
+          <a href="{% url 'contact:register' %}" class="menu-link">REGISTER</a>
+        </li>
+
+      {% endif %}
+
+
+    </ul>
+  </nav>
+  <div class="search">
+    <form action="{% url 'contact:search' %}" method="GET">
+      <input type="search" class="search-input" placeholder="Search" id="search" name="h" value="{{ request.GET.h.strip }}" />
+    </form>
+  </div>
+</header>
