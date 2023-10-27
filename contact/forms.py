@@ -110,7 +110,6 @@ class RegisterUpdateForm(forms.ModelForm):
         required=False,
     )
 
-    
     password2 = forms.CharField(
         label = 'Password 2',
         strip= False,
