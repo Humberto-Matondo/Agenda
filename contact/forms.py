@@ -13,7 +13,8 @@ class ContactForm(forms.ModelForm):
             attrs={
                 'accept':'image/*', # Essa linha diz para ceitar qualquer imagem, posso restringir se quiser.
             }
-        )
+        ),
+        required=False, # para que n seja obrigado a add ft
     )
     class Meta:
         model = models.Contact

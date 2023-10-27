@@ -18,7 +18,9 @@ def create(request):
         }
 
         if form.is_valid(): 
-            contact = form.save() 
+            contact = form.save(commit=False) 
+            contact.owner = request.user # para atribuir um proprietario ao contact criado
+            contact.save()
             messages.success(request, 'Contact Created') #Vai informar que o ficheiro foi salvado
             return redirect('contact:update', contact_id = contact.pk) 
         
@@ -39,9 +41,9 @@ def create(request):
         context,
     )
 
-@login_required(login_url='contact:login') #Para caso n esteja logado, redirecionar isso para contact:login
+@login_required(login_url='contact:login')
 def update(request, contact_id):
-    contact = get_object_or_404(Contact, pk=contact_id, show = True)
+    contact = get_object_or_404(Contact, pk=contact_id, show = True, owner = request.user) #para que n de para mudificarem o contact em outro usuario.
 
     form_action = reverse('contact:update', args=(contact_id,))
 
@@ -76,10 +78,9 @@ def update(request, contact_id):
         context,
     )
 
-@login_required(login_url='contact:login') #Para caso n esteja logado, redirecionar isso para contact:login
+@login_required(login_url='contact:login') 
 def delete(request, contact_id):
-    
-    contact = get_object_or_404(Contact, pk=contact_id, show = True)
+    contact = get_object_or_404(Contact, pk=contact_id, show = True, owner = request.user)
 
     confirmation = request.POST.get('confirmation', 'no')
 

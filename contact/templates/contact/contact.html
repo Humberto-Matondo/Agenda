@@ -5,43 +5,48 @@
     <h1 class="single-contact-name">{{ contact.first_name }} {{ contact.last_name }}</h1>
 
     <p>
-      <b>ID: </b>{{ contact.id }}
+      <b>ID:</b>{{ contact.id }}
     </p>
     <p>
-      <b>E-mail: </b>{{ contact.email }}
+      <b>E-mail:</b>{{ contact.email }}
     </p>
     <p>
-      <b>Phone: </b>{{ contact.phone }}
+      <b>Phone:</b>{{ contact.phone }}
     </p>
     <p>
-      <b>Created Date: </b>{{ contact.created_date }}
+      <b>Created Date:</b>{{ contact.created_date }}
     </p>
     <p>
-      <b>Description: </b>{{ contact.description }}
+      <b>Description:</b>{{ contact.description }}
     </p>
     <p>
-      <b>Category: </b>{{ contact.category.name }}
+      <b>Category:</b>{{ contact.category.name }}
     </p>
 
     {% if contact.picture %}
       <p>
-        <img src="{{contact.picture.url}}" alt="{{contact.first_name}} {{contact.last_name}}">
+        <img src="{{ contact.picture.url }}" alt="{{ contact.first_name }} {{ contact.last_name }}" />
       </p>
     {% endif %}
+
+    {% if user == contact.owner %}
+      {% comment '' %}com esse if so se podera ver o delete e update quando se for o dono do contact.{% endcomment %}
+
+      <div class="contact-links">
+        <a class="btn btn-link" href="{% url 'contact:update' contact.id %}">UPDATE</a>
+
+        <form action="{% url 'contact:delete' contact.id %}" method="POST">
+          {% csrf_token %}
+
+          {% if confirmation == 'no' %}
+            <input type="hidden" name="confirmation" value="yes" />
+            <button class="btn btn-link btn-delete" type="submit">CONFIRMA?</button>
+          {% else %}
+            <button class="btn btn-link btn-delete" type="submit">DELETE</button>
+          {% endif %}
+        </form>
+      </div>
+    {% endif %}
     
-    <div class="contact-links">
-      <a class="btn btn-link" href="{% url 'contact:update' contact.id %}">UPDATE</a>
-
-      <form action="{% url 'contact:delete' contact.id %}" method="POST">
-        {% csrf_token %}
-
-        {% if confirmation == 'no' %}
-          <input type="hidden" name="confirmation" value="yes" />
-          <button class="btn btn-link btn-delete" type="submit">CONFIRMA?</button>
-        {% else %}
-          <button class="btn btn-link btn-delete" type="submit">DELETE</button>
-        {% endif %}
-      </form>
-    </div>
   </div>
 {% endblock %}
