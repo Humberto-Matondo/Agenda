@@ -75,7 +75,7 @@ class RegisterForm(UserCreationForm):
         def clean_email(self):
             email = self.cleaned_data.get('email')
             
-            if User.objects.filter(emil = email).exists(): # Se existe algum usuario com esse email vai retornar TRUE
+            if User.objects.filter(email = email).exists(): # Se existe algum usuario com esse email vai retornar TRUE
                 self.add_error(
                     'email',
                     ValidationError('Ja existe este e-mail', code='invalid')
@@ -105,7 +105,7 @@ class RegisterUpdateForm(forms.ModelForm):
     password1 = forms.CharField(
         label = 'Password',
         strip= False,
-        widget= forms.PasswordInput(attrs={"autocomplete":"new-password"}),
+        widget= forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text= password_validation.password_validators_help_text_html(), #para mostrar o text html para ajudar a preencher os campos
         required=False,
     )
@@ -114,7 +114,7 @@ class RegisterUpdateForm(forms.ModelForm):
     password2 = forms.CharField(
         label = 'Password 2',
         strip= False,
-        widget= forms.PasswordInput(attrs={"autocomplete":"new-password"}),
+        widget= forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text= 'Use the same password as before.',
         required=False,
     )
@@ -157,7 +157,7 @@ class RegisterUpdateForm(forms.ModelForm):
             current_email = self.instance.email
             
             if current_email != email: #quer dizer que  a pessoa quer alterar o email dela, entao...
-                if User.objects.filter(emil = email).exists(): # Se existe algum usuario com esse email vai retornar TRUE
+                if User.objects.filter(email = email).exists(): # Se existe algum usuario com esse email vai retornar TRUE
                     self.add_error(
                         'email',
                         ValidationError('Ja existe este e-mail', code='invalid')
