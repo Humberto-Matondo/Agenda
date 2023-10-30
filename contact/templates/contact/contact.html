@@ -5,22 +5,22 @@
     <h1 class="single-contact-name">{{ contact.first_name }} {{ contact.last_name }}</h1>
 
     <p>
-      <b>ID:</b>{{ contact.id }}
+      <b>ID: </b>{{ contact.id }}
     </p>
     <p>
-      <b>E-mail:</b>{{ contact.email }}
+      <b>E-mail: </b>{{ contact.email }}
     </p>
     <p>
-      <b>Phone:</b>{{ contact.phone }}
+      <b>Phone: </b>{{ contact.phone }}
     </p>
     <p>
-      <b>Created Date:</b>{{ contact.created_date }}
+      <b>Created Date: </b>{{ contact.created_date }}
     </p>
     <p>
-      <b>Description:</b>{{ contact.description }}
+      <b>Description: </b>{{ contact.description }}
     </p>
     <p>
-      <b>Category:</b>{{ contact.category.name }}
+      <b>Category: </b>{{ contact.category.name }}
     </p>
 
     {% if contact.picture %}
@@ -47,6 +47,6 @@
         </form>
       </div>
     {% endif %}
-    
+
   </div>
 {% endblock %}
