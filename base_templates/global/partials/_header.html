@@ -2,11 +2,9 @@
   <h1 class="header-heading"><a href="{% url 'contact:index' %}" class="header-link">AGENDA</a></h1>
   <nav class="menu">
     <ul class="menu-list">
-
       {% comment '' %}As coisas a baixo so acontecera caso o usario esteja logado{% endcomment %}
-      
+
       {% if user.is_authenticated %}
-        
         <li class="menu-item">
           <a href="{% url 'contact:user_update' %}" class="menu-link">USER UPDATE</a>
         </li>
@@ -21,18 +19,14 @@
 
         {% comment '' %}Coisas que acontecem caso o usuario n esteja logado.{% endcomment %}
       {% else %}
-        
         <li class="menu-item">
           <a href="{% url 'contact:login' %}" class="menu-link">LOGIN</a>
-        </li>  
+        </li>
 
         <li class="menu-item">
           <a href="{% url 'contact:register' %}" class="menu-link">REGISTER</a>
         </li>
-
       {% endif %}
-
-
     </ul>
   </nav>
   <div class="search">

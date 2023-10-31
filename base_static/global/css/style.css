@@ -1,6 +1,6 @@
 :root {
     --spacing: 1.5rem;
-    --link-dark-color: #005386;
+    --link-dark-color: rgb(0, 83, 134);
     --link-light-color: rgb(156, 217, 255);
     --clr-white: rgb(245, 245, 255);
     --clr-black: rgb(0, 0, 31);
@@ -45,7 +45,7 @@ body {
     font-size: var(--small-font-size);
     color: var(--clr-black);
     -webkit-font-smoothing: antialiased;
-    background: var(--clr-light-gray);
+    background-image: url(Animated.svg);
 }
 
 img,
@@ -55,9 +55,8 @@ svg {
 }
 
 .header {
-    background: var(--clr-black);
-    padding: var(--spacing);
     box-shadow: 0 5px 10px 2px var(--clr-dark-shadow-20);
+    padding: var(--spacing);
     z-index: 1;
     position: relative;
 }
