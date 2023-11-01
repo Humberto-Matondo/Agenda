@@ -119,6 +119,7 @@ svg {
     width: 100%;
     min-width: var(--table-min-width);
     border-collapse: collapse;
+    animation: fadeIn 0.5s;
 }
 
 .table-caption {
@@ -165,6 +166,7 @@ svg {
     .single-contact {
         max-width: 80%;
         margin: calc(var(--spacing) * 2) auto;
+        animation: fadeIn 0.5s;
     }
 }
 
@@ -174,6 +176,7 @@ svg {
 
 .single-contact p {
     margin: 1rem 0;
+    animation: fadeIn 0.5s;
 }
 
 .pagination {
@@ -247,6 +250,7 @@ svg {
 .form-wrapper {
     max-width: 60rem;
     margin: var(--spacing) auto;
+    animation: fadeIn 0.5s;
 }
 
 .form-content {
@@ -340,7 +344,7 @@ svg {
     background: rgb(245, 39, 3);
 }
 
-.picture{
+.picture {
     width: 50%;
     height: auto;
 }
