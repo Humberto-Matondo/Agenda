@@ -1,9 +1,11 @@
-from django.shortcuts import  get_object_or_404, render, redirect
-from contact.forms import ContactForm
-from django.urls import reverse
-from contact.models import Contact
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
+
+from contact.forms import ContactForm
+from contact.models import Contact
+
 
 @login_required(login_url='contact:login') #Para caso n esteja logado, redirecionar isso para contact:login
 def create(request):
@@ -22,7 +24,7 @@ def create(request):
             contact.owner = request.user # para atribuir um proprietario ao contact criado
             contact.save()
             messages.success(request, 'Contact Created') #Vai informar que o ficheiro foi salvado
-            return redirect('contact:update', contact_id = contact.pk) 
+            return redirect('contact:contact', contact_id = contact.pk) 
         
         return render(
             request,

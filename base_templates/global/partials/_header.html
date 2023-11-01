@@ -6,16 +6,18 @@
 
       {% if user.is_authenticated %}
         <li class="menu-item">
-          <a href="{% url 'contact:user_update' %}" class="menu-link">USER UPDATE</a>
-        </li>
-
-        <li class="menu-item">
           <a href="{% url 'contact:create' %}" class="menu-link">CREATE CONTACT</a>
         </li>
-
+        
         <li class="menu-item">
           <a href="{% url 'contact:logout' %}" class="menu-link">LOGOUT</a>
         </li>
+        
+        <li class="menu-item">
+          <a href="{% url 'contact:user_update' %}" class="menu-link">USER UPDATE</a>
+        </li>
+
+
 
         {% comment '' %}Coisas que acontecem caso o usuario n esteja logado.{% endcomment %}
       {% else %}

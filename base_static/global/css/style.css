@@ -23,7 +23,7 @@
     --transition-fast: 300ms;
     --transition-medium: 600ms;
     --transition-slow: 1s;
-    --default-border-radius: 4px;
+    --default-border-radius: 20px;
 }
 
 *,
@@ -95,6 +95,7 @@ svg {
     transition: background-color var(--transition-fast) ease-in-out;
     border-radius: var(--default-border-radius);
 }
+
 
 .menu-link:hover {
     background: var(--clr-light-shadow-10);
@@ -337,4 +338,9 @@ svg {
 
 .btn-delete {
     background: rgb(245, 39, 3);
+}
+
+.picture{
+    width: 50%;
+    height: auto;
 }
