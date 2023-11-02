@@ -41,8 +41,9 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
   
   1. <a href="https://www.python.org">PYTHON</a>
   2. <a href="https://www.djangoproject.com">DJANGO FRAMEWORK</a>
-  3. <a href="https://html.com">HTML5</a>
-  4. <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS3</a>
+  3. <a href="https://www.sqlite.org/index.html">SQLite3</a>
+  4. <a href="https://html.com">HTML5</a>
+  5. <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS3</a>
 
 
   <h3>Websites Used:</h3>
