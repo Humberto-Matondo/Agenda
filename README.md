@@ -1,5 +1,5 @@
 
-<h1>AGENDA/PHONEBOOK<h1>
+<h1>AGENDA or PHONEBOOK<h1>
 
 It's an application developed in Python with the Django framework, designed to provide users with an effective and intuitive solution for managing phone contacts. With AGENDA, users have the ability to create, organize, and add contacts to their list in an uncomplicated manner.
 
@@ -51,4 +51,23 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
 
   - To search fonts\Icons: <a href="https://fonts.google.com">Google Fonts</a>
   - To create SVG background: <a href="https://bgjar.com">BGjar</a>
+
+  <h3>Commands to clone and set up this project on your local machine:</h3>
+
+    git clone https://github.com/Humberto-Matondo/Agenda.git
+  
+  - For **Windowns**:
+    
+          cd Agenda
+          python -m venv venv
+          venv\Scripts\activate
+          python -m pip install --upgrade pip setuptools wheel --user
+          python -m pip install django django-debug-toolbar django-crispy-forms pillow
+          python -m pip install Pillow  
+          python manage.py migrate
+          python manage.py makemigrations
+          python manage.py collectstatic
+ 
+ 
+ <h1> THANKS FOR THE VISIT! 🫱🏿‍🫲🏻👋🏿 </h1>
   
