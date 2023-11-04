@@ -69,5 +69,5 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
           python manage.py collectstatic
  
  
- <h1> THANKS FOR THE VISIT! 🫱🏿‍🫲🏻👋🏿 </h1>
+ <h1> THANKS FOR THE VISIT! 🫱🏿‍🫲🏻 </h1>
   
