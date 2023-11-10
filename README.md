@@ -24,7 +24,7 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
 
   <div>
     <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE">  
-    <img src="https://i.ibb.co/yqdn2ZK/Contactos-PAGE.png" alt="Contactos-profile-PAGE">
+    <img src="https://i.ibb.co/BLQVMPx/Contacto-PAGE.png"  alt="Contacts-profile-PAGE">
   </div>
   
   <br>
