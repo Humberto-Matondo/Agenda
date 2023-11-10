@@ -1,4 +1,3 @@
-
 <h1>AGENDA or PHONEBOOK<h1>
 
 It's an application developed in Python with the Django framework, designed to provide users with an effective and intuitive solution for managing phone contacts. With AGENDA, users have the ability to create, organize, and add contacts to their list in an uncomplicated manner.
@@ -23,26 +22,27 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
 
 <h2>DEMONSTRATION🖼️</h2>
 
+  <div>
+    <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE" width="300" height="200">  
+    <img src="https://i.ibb.co/yqdn2ZK/Contactos-PAGE.png" alt="Contacts-PAGE" width="400" height="350">
+    <img src="https://i.ibb.co/BLQVMPx/Contacto-PAGE.png" alt="Contacts-profile-PAGE" width="300" height="250">
+  </div>
+  <br>
   If you wish to only view the project, please log in using my username and password:
 
   **User:** Humberto <br/>
   **Password:** 4U9Gkj&Y
 
-  Click on the image below to access the app.
+  **Link:** Not yet available
+  **OBS: ** Caso não consiga acessar ao app, então o servidor está DESLIGADO.
 
-  <a target='_blank' href='#'>
-    <img target='_blank'  src="https://i.ibb.co/rZL2qV8/AGENDA.png" alt="phonebook-Capture" border="0">
-  </a>
-  <br/>
-  <a target='_blank' href='#'></a><br />
-  
-  
     
   <h2>TOOLS ⚒️</h2>
   
   1. <a href="https://www.python.org">PYTHON</a>
   2. <a href="https://www.djangoproject.com">DJANGO FRAMEWORK</a>
-  3. <a href="https://www.sqlite.org/index.html">SQLite3</a>
+  3. <a href="https://www.postgresql.org">POSTGRESQL</a>
+  3. <a href="https://releases.ubuntu.com/focal/">UBUNTU 20.04 LTS</a>
   4. <a href="https://html.com">HTML5</a>
   5. <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS3</a>
 
