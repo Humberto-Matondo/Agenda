@@ -23,8 +23,8 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
 <h2>DEMONSTRATION🖼️</h2>
 
   <div>
-    <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE">  
-    <img src="https://i.ibb.co/BLQVMPx/Contacto-PAGE.png"  alt="Contacts-profile-PAGE">
+    <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE" width="350" height="200">  
+    <img src="https://i.ibb.co/ZXDXKPQ/Contacts-PAGE.png" alt="Contacts-PAGE" border="0" width="300" height="250"/>
   </div>
   
   <br>
