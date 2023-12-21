@@ -1,4 +1,4 @@
-<h1>AGENDA or PHONEBOOK<h1>
+<h1 align="center">AGENDA or PHONEBOOK<h1>
 
 It's an application developed in Python with the Django framework, designed to provide users with an effective and intuitive solution for managing phone contacts. With AGENDA, users have the ability to create, organize, and add contacts to their list in an uncomplicated manner.
 
