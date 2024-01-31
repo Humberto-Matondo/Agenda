@@ -28,13 +28,9 @@ AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their p
   </div>
   
   <br>
-  If you wish to only view the project, please log in using my username and password:
-
+  If you wish to only view the project, please log in using my username and password:<br>
   **User:** Humberto <br/>
   **Password:** 4U9Gkj&Y
-
-  **Link:** Not yet available
-  **OBS: ** Caso não consiga acessar ao app, então o servidor está DESLIGADO.
 
     
   <h2>TOOLS ⚒️</h2>
