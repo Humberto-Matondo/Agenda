@@ -1,7 +1,19 @@
 <h1 align="center">AGENDA or PHONEBOOK<h1>
 
+  <div>
+    <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE" width="350" height="200">  
+    <img src="https://i.ibb.co/ZXDXKPQ/Contacts-PAGE.png" alt="Contacts-PAGE" border="0" width="300" height="250"/>
+  </div>
+
+<h2>About:</h2>
+
 It's an application developed in Python with the Django framework, designed to provide users with an effective and intuitive solution for managing phone contacts. With AGENDA, users have the ability to create, organize, and add contacts to their list in an uncomplicated manner.
 
+<br>
+If you wish to only view the project, please log in using my username and password:<br>
+**User:** Humberto <br>
+**Password:** 4U9Gkj&Y
+  
 <h2>Key features and functionalities include:</h2>
 
 1. **Simple Contact Registration:** Users can add new phone contacts by entering essential information, such as name, phone number, email address, and additional details, in an intuitive process.
@@ -19,21 +31,8 @@ It's an application developed in Python with the Django framework, designed to p
 7. **Multiplatform Access:** The app is accessible on various platforms, allowing users to manage their contacts from any internet-enabled device.
 
 AGENDA/PHONEBOOK offers a convenient solution for those who want to keep their phone contacts organized and accessible at any time and from anywhere. It's the ideal tool for simplifying contact management in an increasingly connected world.
-
-<h2>DEMONSTRATION🖼️</h2>
-
-  <div>
-    <img src="https://i.ibb.co/8BXVzJg/login-Page.png" alt="Login-PAGE" width="350" height="200">  
-    <img src="https://i.ibb.co/ZXDXKPQ/Contacts-PAGE.png" alt="Contacts-PAGE" border="0" width="300" height="250"/>
-  </div>
-  
-  <br>
-  If you wish to only view the project, please log in using my username and password:<br>
-  **User:** Humberto <br/>
-  **Password:** 4U9Gkj&Y
-
     
-  <h2>TOOLS ⚒️</h2>
+<h2>TOOLS ⚒️</h2>
   
   1. <a href="https://www.python.org">PYTHON</a>
   2. <a href="https://www.djangoproject.com">DJANGO FRAMEWORK</a>
